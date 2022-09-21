@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -10,6 +9,7 @@ app.use(express.static(path.join(__dirname, "image")))
 
 app.use(cors());
 app.use(express.json());
+app.use(require('./routes/user.route'));
 app.use(require('./routes/product.route'))
 app.use(require('./routes/muscles.route'))
 app.use(require('./routes/diet.route'))
