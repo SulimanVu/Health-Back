@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const muscleSchema = mongoose.Schema({
     name: String,
-    discription: String
+    description: String
 });
 
 const Muscle = mongoose.model("Muscle", muscleSchema)
