@@ -2,7 +2,7 @@ const Diet = require("../models/Diet.model");
 
 module.exports.diet = {
   getDiet: async (req, res) => {
-    const data = await Diet.find();
+    const data = await Diet.find().populate('product');
     res.json(data);
   },
   addDiet: async (req, res) => {
