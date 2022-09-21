@@ -3,13 +3,16 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 const cors = require("cors");
 const path = require("path");
+
+app.use(express.static(path.join(__dirname, "image")))
 
 app.use(cors());
 app.use(express.json());
 app.use(require('./routes/product.route'))
+app.use(require('./routes/muscle.route'))
+app.use(require('./routes/diet.route'))
 
 mongoose
   .connect(process.env.MONGO_SERVER)
