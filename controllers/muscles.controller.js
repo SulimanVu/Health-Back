@@ -8,6 +8,8 @@ module.exports.muscle = {
   addMuscle: async (req, res) => {
     const data = await Muscle.create({
       name: req.body.name,
+      img: req.body.img,
+      training: req.body.training,
       description: req.body.description,
     });
     res.json(data);
@@ -15,6 +17,8 @@ module.exports.muscle = {
   updateMuscle: async (req, res) => {
     const data = await Muscle.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
+      img: req.body.img,
+      training: req.body.training,
       description: req.body.description,
     });
     res.json(data);

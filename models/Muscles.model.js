@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 
 const muscleSchema = mongoose.Schema({
     name: String,
+    img: String,
+    training: String,
     description: String
 });
 
