@@ -6,7 +6,7 @@ module.exports.userController = {
     addUser: async (req, res) => {
         const { login, password } = req.body;
         try {
-            const hash = bcrypt.hashSync(password, 10);
+            const hash = bcrypt.hashSync(password, process.env.BCRYPT_ROUNDS);
             const user = await User.create({ login: login, password: hash });
             res.json(user);
         } catch (error) {
