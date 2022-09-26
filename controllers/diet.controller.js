@@ -10,6 +10,7 @@ module.exports.diet = {
       name: req.body.name,
       description: req.body.description,
       product: req.body.product,
+      image: req.body.image
     });
     res.json(data);
   },
@@ -18,6 +19,7 @@ module.exports.diet = {
       name: req.body.name,
       description: req.body.description,
       product: req.body.product,
+      image: req.body.image
     });
     res.json(data);
   },

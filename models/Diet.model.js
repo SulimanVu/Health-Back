@@ -6,7 +6,8 @@ const dietSchema = mongoose.Schema({
     product: [{
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'Product'
-    }]
+    }],
+    image: String
 })
 
 
